@@ -1,0 +1,66 @@
+/* Flexbox container to align image and text side by side */
+.intro-container {
+    display: flex;
+    align-items: center; /* Vertically align the image and text */
+    justify-content: space-between; /* Space between image and text */
+    padding: 20px;
+}
+
+/* Style for the image */
+.intro-image img {
+    width: 250px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #ccc; /* Optional: Add a border */
+}
+
+/* Style for the text section */
+.intro-text {
+    margin-left: 20px; /* Space between the image and text */
+    max-width: 1200px; /* Restrict the width of the text */
+}
+
+/* Style the h1 to make it stand out */
+.intro-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Style for the paragraph */
+.intro-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Button container */
+.actions {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px;
+}
+
+/* Center the button */
+.actions li {
+    display: flex;
+    align-items: center; /* Center the button vertically */
+    justify-content: center;
+}
+
+
+
+/* Responsive design: Stack image and text on small screens */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column; /* Stack image and text */
+        text-align: center; /* Center-align for mobile */
+    }
+    
+    .intro-image img {
+        width: 200px; /* Reduce image size on smaller screens */
+        margin-bottom: 20px;
+    }
+    
+    .intro-text {
+        margin-left: 0;
+    }
+}
